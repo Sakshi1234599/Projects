@@ -88,11 +88,11 @@ app.use((req,res,next) => {
 
 });
 
-// app.get("/", async (req, res) => {
-//   const Listing = require("./models/listing"); // Ensure this is required
-//   const allListings = await Listing.find({});
-//   res.render("listings/index", { allListings });
-// });
+app.get("/", async (req, res) => {
+  const Listing = require("./models/listing"); // Ensure this is required
+  const allListings = await Listing.find({});
+  res.render("listings/index", { allListings });
+});
 
 
 app.get("/demouser", async (req, res) => {
