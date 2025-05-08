@@ -87,6 +87,10 @@ app.use((req,res,next) => {
   next();
 });
 
+app.get("/", (req, res) => {
+  res.render("index"); 
+});
+
 app.get("/demouser", async (req, res) => {
   req.flash("success", "Welcome, demo user!");
   res.redirect("/listings");
