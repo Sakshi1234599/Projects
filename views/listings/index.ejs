@@ -30,11 +30,7 @@
       border-radius: 1rem;
     } */
   </style>
-    <!-- <div id="filters">
-       <div class="filter">
-        <i class="fa-solid fa-fire"></i>
-        <p>trending</p>
-       </div>
+   
        
        <div class="filter">
         <i class="fa-solid fa-bed"></i>
@@ -137,7 +133,7 @@
             <h5 class="card-title"></h5>
             <p class="card-text">
               <b><%= listing.title %> </b><br>
-              <%= listing.price.toLocaleString("en-IN") %> /night
+              <%= listing.price ? listing.price.toLocaleString("en-IN") : "Price not available" %> /night
             </p>
           </div>
         </div>
